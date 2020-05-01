@@ -1,0 +1,14 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h1>{{ blog.title }}</h2>
+
+<h2>- {{ blog.date|date:'F jS Y' }} - </h2>
+
+<p>{{ blog.description|striptags }}</p>
+
+<br>
+<a href="{% url 'blog:all_blogs' %}">blogs</a>
+
+{% endblock %}
